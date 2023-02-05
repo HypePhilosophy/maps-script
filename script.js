@@ -3,7 +3,7 @@ let map;
 function initMap() {
 	// Getting the averages of all the coordinates to find a center point to center the map on.
 	console.log(localStorage.getItem("GPTResponseJSON"))
-	var obj = JSON.parse((localStorage.getItem("GPTResponseJSON")))
+	var obj = JSON.parse(localStorage.getItem("GPTResponseJSON").replace(/\\/g,""));
 	console.log(obj)
 	var features = [];
 	var avgX = 0;
